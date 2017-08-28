@@ -13,10 +13,9 @@ import pylp
 
 # Get the absolute path of the renamed file
 def get_abs_path(path, file):
-	if os.path.isabs(self.obj)
-		file.set_path(self.obj)
-	else:
-		file.set_path(os.path.join(file.base, self.obj))
+	if not os.path.isabs(path):
+		path = os.path.join(file.base, path)
+	return path
 
 
 
