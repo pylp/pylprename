@@ -46,7 +46,7 @@ class rename(pylp.Transformer):
 	# Transform function when 'name' parameter is a function
 	async def transform_func(self, file):
 		path = self.obj(file.relative)
-		if isinstance(name, str) and path:
+		if isinstance(path, str) and path:
 			 file.set_path(get_abs_path(path, file))
 		return file
 
