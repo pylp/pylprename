@@ -53,12 +53,14 @@ class rename(pylp.Transformer):
 
 	# Transform function when 'name' is a None
 	async def transform_values(self, file):
+		split = os.path.splitext(file.relative)
+
 		dirname = self.values.get("dirname", os.path.dirname(file.relative))
-		basename = self.values.get("basename", os.path.basename(file.relative))
-		ext = self.values.get("ext", os.path.splitext(file.relative)[1])
+		basename = self.values.get("basename", split[0])
+		ext = self.values.get("ext", split[1])
 		prefix = self.values.get("prefix", "")
 		suffix = self.values.get("suffix", "")
 
 		path = os.path.join(dirname, prefix + basename + suffix + ext)
-		file.set_path(get_abs_path(self.obj, file))
+		file.set_path(get_abs_path(path, file))
 		return file
