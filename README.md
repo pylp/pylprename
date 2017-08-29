@@ -1,6 +1,6 @@
 ## Information
 
-[![PyPI](https://img.shields.io/pypi/v/pylprename.svg)](https://pypi.org/project/pylp)
+[![PyPI](https://img.shields.io/pypi/v/pylprename.svg)](https://pypi.org/project/pylprename)
 [![PyPI](https://img.shields.io/pypi/format/pylprename.svg)]()
 [![PyPI](https://img.shields.io/pypi/pyversions/pylprename.svg)]()
 
